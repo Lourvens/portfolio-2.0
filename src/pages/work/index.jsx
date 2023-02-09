@@ -35,7 +35,7 @@ function Work() {
           <h1 className="text-2xl tracking-widest">Latest Work.</h1>
           <h3 className="text-gray-500">View my recent works</h3>
         </div>
-        <div className="card--group flex flex-wrap gap-x-2 gap-y-6 mt-4 justify-center lg:justify-around">
+        <div className="card--group flex flex-wrap gap-x-2 gap-y-6 mt-4 justify-center lg:justify-start">
           {projects.map((val) => (
             <Card
               img={val.img}
