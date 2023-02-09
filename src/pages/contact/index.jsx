@@ -86,11 +86,11 @@ function Contact() {
         <a
           href="https://www.buymeacoffee.com/lourvensluw"
           target="_blank"
-          className="flex items-center gap-3"
+          className="flex items-center gap-3 mt-3"
           rel="noreferrer"
         >
-          <div className="flex justify-center items-center bg-yellow-100 w-12 h-12 rounded-full">
-            <img src={coffeeImg} alt="" className="w-16 max-w-max" />
+          <div className="flex justify-center items-center bg-yellow-300 w-8 h-8 rounded-full">
+            <img src={coffeeImg} alt="" className="w-9 max-w-max" />
           </div>
           <span className="text-yellow-300">buy me a coffee !</span>
         </a>
