@@ -2,6 +2,7 @@ import gsap, { Power3 } from "gsap";
 import React, { useLayoutEffect, useRef } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import logoImg from "../../assets/logo.svg";
+import coffeeImg from "../../assets/coffee.gif";
 import socialData from "../../data/socials";
 import Form from "./Form";
 
@@ -82,6 +83,17 @@ function Contact() {
             </a>
           ))}
         </div>
+        <a
+          href="https://www.buymeacoffee.com/lourvensluw"
+          target="_blank"
+          className="flex items-center gap-3"
+          rel="noreferrer"
+        >
+          <div className="flex justify-center items-center bg-yellow-100 w-12 h-12 rounded-full">
+            <img src={coffeeImg} alt="" className="w-16 max-w-max" />
+          </div>
+          <span className="text-yellow-300">buy me a coffee !</span>
+        </a>
       </div>
     </div>
   );
