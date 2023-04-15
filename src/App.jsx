@@ -2,9 +2,9 @@ import React from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import Home from "./pages/home";
-import Contact from "./pages/contact";
-import Work from "./pages/work";
+import Home from "./sections/home";
+import Contact from "./sections/contact";
+import Work from "./sections/work";
 
 import "./styles/App.scss";
 

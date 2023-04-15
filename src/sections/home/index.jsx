@@ -48,7 +48,7 @@ function Header() {
     <div className="relative min-h-screen overflow-hidden">
       <img
         src={heroBg}
-        alt="hero dark"
+        alt=""
         className="absolute w-full object-cover h-full pointer-events-none"
       />
       <div className="relative min-h-screen bg-gray-900 opacity-60">
@@ -86,7 +86,7 @@ function Header() {
                 <AiOutlineMinus /> introduction
               </h3>
               <h1 className="text-3xl font-semibold my-3 lg:my-4 font-header">
-                Hello, I&apos;am a creative Frontend Engineer.
+                Hello, I&apos;m a creative Frontend Engineer.
               </h1>
               <p className="text-sm text-gray-200">
                 As a self-taught frontend developer, I am highly motivated and
@@ -101,7 +101,7 @@ function Header() {
               </p>
               <a
                 href="#contact"
-                className="inline-block px-4 py-2 my-2 text-white font-bold bg-teal-700"
+                className="inline-block px-4 py-2 my-2 text-white font-bold bg-teal-700 rounded border hover:bg-transparent transition"
               >
                 Get in touch
               </a>

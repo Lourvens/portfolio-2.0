@@ -10,16 +10,19 @@ function Navbar() {
   const styles = {
     link: "text-xl first-letter:capitalize",
   };
+
+  const Link = ({ href, children }) => (
+    <a href={href} className="text-teal-200 hover:text-teal-500 group relative">
+      {children}
+      <span className="absolute w-0 h-0.5 bg-teal-500 left-0 bottom-1.5 group-hover:w-full transition-all duration-300" />
+    </a>
+  );
   useLayoutEffect(() => {
     const tl = gsap.timeline();
     const q = gsap.utils.selector(linksRef);
     tl.fromTo(
       logoRef.current,
-      {
-        duration: 0.4,
-        opacity: 0,
-        x: 100,
-      },
+      { duration: 0.4, opacity: 0, x: 100 },
       {
         opacity: 1,
         x: 0,
@@ -46,15 +49,23 @@ function Navbar() {
       </a>
       <ul className="lg:flex gap-x-16 hidden" ref={linksRef}>
         <li className={styles.link}>
-          <a href="#about" className="active">
+          <Link href="#about" className="active">
             about me
-          </a>
+          </Link>
         </li>
         <li className={styles.link}>
-          <a href="#project">projects</a>
+          <Link href="#skills">skills</Link>
         </li>
+
         <li className={styles.link}>
-          <a href="#contact">contact</a>
+          <Link href="#project">projects</Link>
+        </li>
+
+        <li className={styles.link}>
+          <Link href="#contact">contact</Link>
+        </li>
+        <li>
+          <button></button>
         </li>
       </ul>
       <button
