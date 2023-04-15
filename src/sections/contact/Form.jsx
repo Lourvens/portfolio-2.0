@@ -5,11 +5,11 @@ import Notice from "./Notice";
 import { BsArrowRight } from "react-icons/bs";
 
 const styles = {
-  title: "text-2xl font-semibold text-teal-100",
+  title: "text-2xl font-semibold dark:text-teal-100",
   boxInput: "w-full flex flex-col my-4",
   input:
     "outline-none bg-transparent border-b border-gray-500 text-teal-700 focus:border-teal-700 valid:border-teal-700",
-  label: "text-white",
+  label: "text-slate-700 dark:text-white",
 };
 
 function Form() {
@@ -82,7 +82,7 @@ function Form() {
             minLength={10}
           ></textarea>
         </div>
-        <button className="text-teal-300 font-semibold">
+        <button className="text-teal-600 dark:text-teal-300 font-semibold">
           <span className="flex items-center gap-2 hover:gap-5 transition-all">
             submit <BsArrowRight />
           </span>

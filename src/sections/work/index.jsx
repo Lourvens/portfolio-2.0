@@ -29,7 +29,7 @@ function Work() {
     }, containerRef);
   }, []);
   return (
-    <div className="bg-darker" id="project" ref={containerRef}>
+    <div id="project" ref={containerRef}>
       <section className="section">
         <div className="section__header lg:w-3/5 mb-10">
           <h1 className="text-2xl tracking-widest">Latest Work.</h1>

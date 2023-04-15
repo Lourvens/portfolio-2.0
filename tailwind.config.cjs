@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ['class'],
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -12,6 +13,9 @@ module.exports = {
       fontFamily: {
         body: ['Catamaran', 'sans-serif'],
         header: ['Raleway', 'sans-serif']
+      },
+      backgroundImage: {
+        'hero': "url('/bg1.jpg')"
       }
     },
   },

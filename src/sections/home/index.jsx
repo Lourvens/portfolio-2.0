@@ -1,14 +1,12 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 
-import { AiOutlineMinus } from "react-icons/ai";
 import {
   animateWrapper,
   staggerFromLeft,
   staggerFromBottom,
 } from "../../utils/animation";
 import socialData from "../../data/socials";
-import heroBg from "../../assets/bg1.jpg";
 import Navbar from "../../components/Navbar";
 import AnimatedWrapper from "../../components/AnimatedWrapper";
 
@@ -45,63 +43,55 @@ function Header() {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      <img
-        src={heroBg}
-        alt=""
-        className="absolute w-full object-cover h-full pointer-events-none"
-      />
-      <div className="relative min-h-screen bg-gray-900 opacity-60">
+    <div className="relative min-h-screen overflow-hidden dark:bg-hero dark:bg-no-repeat dark:bg-cover">
+      <div className="relative min-h-screen text-slate-500 dark:text-slate-200 dark:bg-gray-900 dark:opacity-60">
         <div className="section">
           <Navbar />
-          <div className="flex flex-col lg:flex-row justify-between">
+          <div className="flex flex-col lg:flex-row justify-between align-top">
             <div>
-              <h1 className="flex flex-col gap-4 text-6xl capitalize w-1/2 font-thin">
+              <h1 className="flex flex-col gap-4 text-6xl capitalize w-1/2 font-thin text-slate-600 dark:text-white">
                 <AnimatedWrapper ref={h1Ref}>lourvens</AnimatedWrapper>
                 <AnimatedWrapper ref={h2Ref} className="tracking-[0.3em]">
                   luxamar.
                 </AnimatedWrapper>
                 <hr
-                  className="my-2 ml-1 w-48 h-2 bg-teal-400 border-none origin-top-left"
+                  className="my-2 ml-1 w-48 h-2 bg-teal-500 border-none origin-top-left"
                   ref={lineRef}
                 />
               </h1>
               <div
-                className="flex mt-8 lg:mt-16 gap-8 text-white text-3xl"
+                className="flex mt-8 lg:mt-16 gap-8 dark:text-white text-3xl"
                 ref={socialsIconRef}
               >
                 {socialData.map((el, i) => (
                   <a
                     href={el.url}
                     key={`card-${i}`}
-                    className="hover:text-teal-300 transform"
+                    className="hover:text-teal-500 dark:hover:text-teal-300 transform"
                   >
                     <el.Icon />
                   </a>
                 ))}
               </div>
             </div>
-            <div className="max-w-[360px] mt-12 lg:mt-0" ref={sideContentRef}>
-              <h3 className="">
-                <AiOutlineMinus /> introduction
-              </h3>
+            <div className="lg:w-6/12 mt-12 lg:mt-0" ref={sideContentRef}>
               <h1 className="text-3xl font-semibold my-3 lg:my-4 font-header">
-                Hello, I&apos;m a creative Frontend Engineer.
+                Hello, I&apos;m a creative{" "}
+                <span className="text-teal-500">Frontend Developer.</span>
               </h1>
-              <p className="text-sm text-gray-200">
-                As a self-taught frontend developer, I am highly motivated and
-                dedicated to continuously learning and improving my skills. I
-                have a strong understanding of JavaScript, React and Data
-                Structure, and have experience building visually appealing and
-                interactive user interfaces for websites and applications.
-                <br />
-                <br />I am highly adaptable and able to quickly learn and apply
-                new concepts, as evidenced by my successful self-study journey
-                in frontend development.
+              <p className="dark:text-gray-200">
+                I am a passionate Frontend Developer who is currently expanding
+                my skills to Backend Development. My tech stack includes React,
+                TailwindCSS, and TypeScript. I am constantly seeking new
+                challenges and opportunities to learn and improve my programming
+                skills.
+                <br /> <br /> With my dedication and passion for programming, I
+                am confident that I can create compelling and visually appealing
+                web applications that meet the needs of clients and users alike.
               </p>
               <a
                 href="#contact"
-                className="inline-block px-4 py-2 my-2 text-white font-bold bg-teal-700 rounded border hover:bg-transparent transition"
+                className="inline-block px-4 py-2 my-2 text-white font-bold bg-teal-600 rounded border hover:bg-opacity-80 dark:hover:bg-transparent transition"
               >
                 Get in touch
               </a>

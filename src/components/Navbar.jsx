@@ -1,9 +1,13 @@
 import gsap from "gsap";
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useContext, useLayoutEffect, useRef, useState } from "react";
 import logoImg from "../assets/logo-2.svg";
+import { themeContext } from "../theme";
+
+import { BsSunFill, BsMoonStarsFill } from "react-icons/bs";
 
 function Navbar() {
   const [isNavExpanded, setNavExpanded] = useState(false);
+  const { theme, toggleTheme } = useContext(themeContext);
   const logoRef = useRef(null);
   const linksRef = useRef([]);
 
@@ -12,11 +16,15 @@ function Navbar() {
   };
 
   const Link = ({ href, children }) => (
-    <a href={href} className="text-teal-200 hover:text-teal-500 group relative">
+    <a
+      href={href}
+      className="text-teal-600 dark:text-teal-200 hover:text-teal-500 group relative"
+    >
       {children}
       <span className="absolute w-0 h-0.5 bg-teal-500 left-0 bottom-1.5 group-hover:w-full transition-all duration-300" />
     </a>
   );
+
   useLayoutEffect(() => {
     const tl = gsap.timeline();
     const q = gsap.utils.selector(linksRef);
@@ -65,7 +73,9 @@ function Navbar() {
           <Link href="#contact">contact</Link>
         </li>
         <li>
-          <button></button>
+          <button onClick={toggleTheme} className="text-2xl text-teal-500">
+            {theme == "light" ? <BsSunFill /> : <BsMoonStarsFill />}
+          </button>
         </li>
       </ul>
       <button

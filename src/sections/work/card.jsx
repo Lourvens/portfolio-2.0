@@ -4,13 +4,13 @@ import React, { useLayoutEffect, useRef } from "react";
 import { BsCodeSlash } from "react-icons/bs";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 
-function Card({ urls, content, tags, img, title }) {
+function Card({ urls, tags, img, title }) {
   const containerRef = useRef();
   const ctx = useRef();
   const styles = {
-    btn: "inline-flex items-center gap-2 text-teal-400 hover:text-teal-500",
+    btn: "inline-flex items-center gap-2 text-teal-500 dark:text-teal-400 hover:text-teal-500 capitalize",
     primaryBtn:
-      "inline-flex items-center gap-2 bg-teal-700 bg-opacity-80 py-2 px-4 font-medium rounded-full hover:bg-opacity-100 outline outline-1 outline-transparent focus:outline-teal-900 outline-offset-2 transition-all",
+      "inline-flex items-center gap-2 bg-teal-700 text-white dark:bg-opacity-80 py-2 px-4 font-medium rounded-full hover:bg-opacity-100 outline outline-1 outline-transparent focus:outline-teal-900 outline-offset-2 transition-all",
   };
 
   useLayoutEffect(() => {
@@ -35,7 +35,7 @@ function Card({ urls, content, tags, img, title }) {
   return (
     <div
       ref={containerRef}
-      className="card shrink-0 relative min-h-96 bg-slate-500 bg-opacity-10 w-80 rounded-md overflow-hidden"
+      className="card shrink-0 relative min-h-96 bg-white shadow dark:bg-slate-500 dark:bg-opacity-10 w-80 rounded-md overflow-hidden"
     >
       <div
         onMouseEnter={() => {
@@ -51,14 +51,14 @@ function Card({ urls, content, tags, img, title }) {
       </div>
       <div className="py-4 px-4">
         <div className="flex justify-between items-baseline">
-          <h1 className="text-lg capitalize text-white font-medium">{title}</h1>
+          <h1 className="text-lg capitalize dark:text-white font-medium">
+            {title}
+          </h1>
         </div>
-
-        <p className="text-gray-400 leading-snug my-2"> {content}</p>
         <div className="flex gap-3">
           {tags.map((tag) => (
             <span
-              className="text-sm text-teal-500 opacity-40 capitalize"
+              className="text-teal-500 dark:opacity-40 capitalize"
               key={`card-${tag}`}
             >
               {tag}
@@ -72,7 +72,7 @@ function Card({ urls, content, tags, img, title }) {
             target="_blank"
             rel="noreferrer"
           >
-            <HiArrowTopRightOnSquare /> open website
+            <HiArrowTopRightOnSquare /> live demo
           </a>
           <a
             className={styles.btn}

@@ -19,7 +19,7 @@ body {
 }
 
 h3 {
-  @apply inline-flex items-center gap-1 text-gray-300 capitalize text-lg;
+  @apply inline-flex items-center gap-1 dark:text-gray-300 capitalize text-lg;
 }
 
 $hamburger-layer-width: 32px;
