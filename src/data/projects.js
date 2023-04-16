@@ -6,11 +6,11 @@ import img5 from "../assets/project-05.png"
 
 const projects = [
   {
-    title: "digital agency",
+    title: "Lofi - A Music App for Focus and Motivation",
     img: img1,
-    tags: ["React", "NextUI", "Scroll-Reveal"],
-    urls: ["https://dagency.vercel.app/", "https://github.com/Lourvens/dtravel"]
-  }, 
+    tags: ["React", "Tailwidcss", "Audio Api"],
+    urls: ["https://lofi-delta.vercel.app/", "https://github.com/Lourvens/lofi"]
+  },
   {
     title: "the quote",
     img: img2,
@@ -35,7 +35,6 @@ const projects = [
     tags: ["Tailwidcss", "NextJS"],
     urls: ["https://upward-eosin.vercel.app", "https://github.com/Lourvens/upward"]
   },
-
 ]
 
 export default projects
