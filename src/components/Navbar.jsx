@@ -1,12 +1,12 @@
 import gsap from "gsap";
-import React, { useContext, useLayoutEffect, useRef, useState } from "react";
+import React, { useContext, useLayoutEffect, useRef } from "react";
 import logoImg from "../assets/logo-2.svg";
 import { themeContext } from "../theme";
 
 import { BsSunFill, BsMoonStarsFill } from "react-icons/bs";
+import Menu from "./Menu";
 
 function Navbar() {
-  const [isNavExpanded, setNavExpanded] = useState(false);
   const { theme, toggleTheme } = useContext(themeContext);
   const logoRef = useRef(null);
   const linksRef = useRef([]);
@@ -51,11 +51,11 @@ function Navbar() {
     );
   }, []);
   return (
-    <nav className="flex justify-between items-center mb-36">
+    <nav className="px-4 py-6 max-w-5xl fixed sm:absolute sm:bg-transparent top-0 z-50 w-full flex justify-between items-center bg-teal-900 bg-opacity-5 backdrop-blur-md sm:left-1/2 transform sm:-translate-x-1/2">
       <a href="#" ref={logoRef}>
         <img src={logoImg} alt="" className="w-12" />
       </a>
-      <ul className="lg:flex gap-x-16 hidden" ref={linksRef}>
+      <ul className="sm:flex sm:gap-x-10 lg:gap-x-16 hidden" ref={linksRef}>
         <li className={styles.link}>
           <Link href="#about" className="active">
             about me
@@ -78,22 +78,7 @@ function Navbar() {
           </button>
         </li>
       </ul>
-      <button
-        className={`lg:hidden hamburger hamburger--elastic ${
-          isNavExpanded ? "is-active" : ""
-        }`}
-        type="button"
-        aria-label="Menu"
-        aria-controls="navigation"
-        aria-expanded="true/false"
-        onClick={() => {
-          setNavExpanded((v) => !v);
-        }}
-      >
-        <span className="hamburger-box">
-          <span className="hamburger-inner"></span>
-        </span>
-      </button>
+      <Menu />
     </nav>
   );
 }

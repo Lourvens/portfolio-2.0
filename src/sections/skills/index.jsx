@@ -14,11 +14,11 @@ export default function SkillSection() {
       <h1 className="text-center text-2xl font-bold text-teal-500 capitalize mb-4">
         what i am good at ?
       </h1>
-      <div className="flex justify-between items-center flex-col sm:flex-row">
+      <div className="flex justify-between items-center flex-col md:flex-row">
         <div className="w-[400px] overflow-hidden">
           <AnimatedSkillSvg />
         </div>
-        <div className="sm:w-6/12 flex flex-col items-center gap-4">
+        <div className="md:w-6/12 flex flex-col items-center gap-4">
           <h1 className="capitalize font-bold text-xl text-slate-500 dark:text-teal-500">
             Full-Stack development
           </h1>

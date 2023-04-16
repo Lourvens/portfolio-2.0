@@ -7,7 +7,6 @@ import {
   staggerFromBottom,
 } from "../../utils/animation";
 import socialData from "../../data/socials";
-import Navbar from "../../components/Navbar";
 import AnimatedWrapper from "../../components/AnimatedWrapper";
 
 function Header() {
@@ -44,10 +43,9 @@ function Header() {
 
   return (
     <div className="relative min-h-screen overflow-hidden dark:bg-hero dark:bg-no-repeat dark:bg-cover">
-      <div className="relative min-h-screen text-slate-500 dark:text-slate-200 dark:bg-gray-900 dark:opacity-60">
+      <div className="relative min-h-screen text-slate-500 dark:text-slate-200 dark:bg-gray-900 dark:opacity-80">
         <div className="section">
-          <Navbar />
-          <div className="flex flex-col lg:flex-row justify-between align-top">
+          <div className="flex flex-col lg:flex-row justify-between align-top mt-32">
             <div>
               <h1 className="flex flex-col gap-4 text-6xl capitalize w-1/2 font-thin text-slate-600 dark:text-white">
                 <AnimatedWrapper ref={h1Ref}>lourvens</AnimatedWrapper>
@@ -74,12 +72,12 @@ function Header() {
                 ))}
               </div>
             </div>
-            <div className="lg:w-6/12 mt-12 lg:mt-0" ref={sideContentRef}>
-              <h1 className="text-3xl font-semibold my-3 lg:my-4 font-header">
+            <div className="sm:w-6/12 mt-12 sm:mt-0" ref={sideContentRef}>
+              <h1 className="max-w-md text-3xl font-semibold my-3 lg:my-4 font-header">
                 Hello, I&apos;m a creative{" "}
-                <span className="text-teal-500">Frontend Developer.</span>
+                <span className="text-teal-500">Full-stack Developer.</span>
               </h1>
-              <p className="dark:text-gray-200">
+              <p className="max-w-md dark:text-gray-200">
                 I am a passionate Frontend Developer who is currently expanding
                 my skills to Backend Development. My tech stack includes React,
                 TailwindCSS, and TypeScript. I am constantly seeking new

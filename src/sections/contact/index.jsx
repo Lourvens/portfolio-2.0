@@ -40,7 +40,7 @@ function Contact() {
   return (
     <div className="py-20 dark:bg-darker" id="contact" ref={containerRef}>
       <div className="section lg:flex lg:justify-between">
-        <div className="section__right lg:w-1/2">
+        <div className="section__right md:w-2/3 lg:w-1/2">
           <h1 className={styles.title}>
             Got a project in mind ? <br />
             Let&apos;s talk.
@@ -60,7 +60,7 @@ function Contact() {
             </a>
           </span>
         </div>
-        <div className="section__left mt-12 lg:mt-0 lg:w-2/5">
+        <div className="section__left mt-12 lg:mt-0 md:w-4/5 lg:w-2/5">
           <h1 className={styles.title}>
             Describe it here. <br />
             <span className="text-lg font-extralight text-teal-500 dark:text-teal-300 italic">

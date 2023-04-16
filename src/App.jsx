@@ -9,6 +9,7 @@ import Work from "./sections/work";
 import "./styles/App.scss";
 import { ThemeProvider } from "./theme";
 import SkillSection from "./sections/skills";
+import Navbar from "./components/Navbar";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,6 +20,7 @@ function App() {
       className="max-w-[1440px] mx-auto bg-slate-100 dark:bg-dark dark:text-teal-100"
     >
       <ThemeProvider>
+        <Navbar />
         <Home />
         <SkillSection />
         <Work />
