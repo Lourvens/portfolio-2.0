@@ -27,3 +27,11 @@ $hamburger-padding-x: 1px;
 $hamburger-padding-y: 1px;
 $hamburger-layer-color: #32b6a6;
 @import "../node_modules//hamburgers/_sass/hamburgers/hamburgers.scss";
+
+.typewriter {
+  @apply max-w-md text-2xl font-medium my-3 lg:my-4 font-header;
+}
+
+.typewriter b {
+  @apply text-teal-500 font-semibold;
+}
